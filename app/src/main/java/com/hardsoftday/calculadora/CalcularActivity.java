@@ -44,12 +44,12 @@ public class CalcularActivity extends AppCompatActivity {
                     if (_suma.isChecked()) operacion = "Suma";
                     if (_resta.isChecked()) operacion = "Resta";
                     if (_mutltiplicacion.isChecked()) operacion = "Multiplicación";
-                    if (_division.isChecked()) operacion = "Divisi+on";
+                    if (_division.isChecked()) operacion = "División";
 
                     Intent i = new Intent(getApplicationContext(), ResultadoActivity.class);
                     i.putExtra("numero1", _numero1.getText().toString());
                     i.putExtra("numero2", _numero2.getText().toString());
-                    i.putExtra("operación", operacion);
+                    i.putExtra("operacion", operacion);
                     startActivity(i);
 
                 }

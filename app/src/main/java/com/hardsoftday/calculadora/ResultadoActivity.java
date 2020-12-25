@@ -12,7 +12,7 @@ public class ResultadoActivity extends AppCompatActivity {
     TextView _recibeNumero1, _recibeNumero2, _texto, _resultado;
     Button _btnVolver;
 
-    int n1, n2, r;
+    Double n1, n2, r;
     String operacion;
 
     @Override
@@ -28,8 +28,11 @@ public class ResultadoActivity extends AppCompatActivity {
 
         _btnVolver = findViewById(R.id.btnVolver);
 
-        n1 = Integer.parseInt(getIntent().getExtras().getString("numero1"));
-        n2 = Integer.parseInt(getIntent().getExtras().getString("numero2"));
+        n1 = Double.parseDouble(getIntent().getExtras().getString("numero1"));
+        n2 = Double.parseDouble(getIntent().getExtras().getString("numero2"));
+
+        _recibeNumero1.setText("Número 1: " + n1);
+        _recibeNumero2.setText("Número 2: " + n2);
         operacion = getIntent().getExtras().getString("operacion");
 
         switch (operacion) {
@@ -48,7 +51,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 break;
         }
 
-        _texto.setText("La " + operacion + "es:");
+        _texto.setText("La " + operacion + " es:");
         _resultado.setText(String.valueOf(r));
 
         _btnVolver.setOnClickListener(new View.OnClickListener() {

@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center"
     tools:context=".CalcularActivity">
 
 
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"/>
 
     <RadioGroup
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -52,8 +55,10 @@
 
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#2196F3"
         android:text="Calcular" />
 
 </LinearLayout>

@@ -1,2 +1,2 @@
 # Calculadora App
-![](docs/Screenshot.png)
+<!-- ![](docs/Screenshot.png) -->
